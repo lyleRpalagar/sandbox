@@ -1,32 +1,18 @@
 # Sandbox
 ---
 
-1. Css
+1. Adobe Illustrator & Photoshop
+
+2. Css
    * 3D Cube
    * Default Style
    * Hamburger Icon
    * Overlay
 
-2. HTML
-   * .Htaccess
+3. HTML
+   * .htaccess
    * robots.txt
    * workorder
-
-3. PHP
-   * CMS
-      1. CMS Practice One
-      2. CMS Practice Two
-      3. CMS Site
-      4. CMS Site with Login
-   * Survey
-   * Email
-      1. Email Responsive
-      2. Email Image File
-      3. Email Multiple 
-      4. Email
-    * Tutoring PHP 336 Database
-      1. dev.xospheriac
-      2. dev.yourstruly
 
 4. Java
 
@@ -39,3 +25,19 @@
    * Resize Header On Scroll
    * Sort
    	 1. Alphabetical
+
+6. PHP
+   * CMS
+      1. CMS Practice One
+      2. CMS Practice Two
+      3. CMS Site
+   * Survey
+   * Email
+      1. Email Responsive
+      2. Email Image File
+      3. Email Multiple 
+      4. Email Example
+    * Tutoring PHP 336 Database
+      1. dev.xospheriac
+      2. adavenport.com 
+      3. dev.yourstruly
