@@ -1,0 +1,251 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);
+/* Reset Browser Defaults
+-------------------------------------------------------------- */
+* { outline-style: none; -webkit-text-size-adjust: none; }
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset { margin:0; padding:0; }
+input { margin: 0; }
+a img,:link img,:visited img { border: none; }
+ol,ul{list-style:none;}
+th{text-align:left;}
+q:before,q:after{content:'';}
+pre,code{font:115% monospace; font-size:100%;}
+th{text-align:left;}
+cite,code,th,address,footer{font-style:normal;font-weight:normal;}
+input, textarea {-webkit-border-radius: 0;}
+
+
+
+
+*{
+  font-family: 'Lato', sans-serif;
+}
+.hidden{
+	display:none;
+}
+.show{
+	display:block;
+}
+.clear{
+	clear:both;
+}
+
+/* Wrapper & Container
+-------------------------------------------------------------- */
+#wrapper{
+	margin:0px auto;
+	max-width:1000px;
+	width:90%;
+	height:auto;
+}
+
+/* Navigation & Footer 
+-------------------------------------------------------------- */
+#adminNav #logo, #nav #logo, #footer #copy{
+	margin-right:5%;
+	text-align:left;
+	float:left;
+	padding-left:5%;
+	color:#fff;
+}
+#adminNav li, #nav li, #footer li {
+	display:inline;
+	margin-right:5%;
+}
+#adminNav a, #nav a, #footer a{
+   text-decoration:none;
+   color:#fff;
+   text-align:right;
+}
+#adminNav ul, #nav ul, #footer ul{
+		text-align:right;
+}
+#adminNav, #nav, #footer {
+	background-color:#000;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#footer{
+	/*position:absolute;*/
+	margin:0px auto;
+	max-width:1000px;
+	width:90%;
+	bottom:0;
+    height:20px;
+	min-height:34px;
+}
+
+/* Home
+-------------------------------------------------------------- */
+#homeH1{
+	float:left;
+}
+#homeH2, #homeH3{
+	width:125px;
+	padding-left:35%;
+}
+#homeCol1{
+	text-align:center;
+	padding-top:10%;
+	padding-right:5%;
+	padding-left:15%;
+	margin-top:2%;
+	margin-bottom:15%;
+}
+#homeCol2, #homeCol3{
+	width:40%;
+    float:left;
+    text-align:justify;
+    padding-right:20px;
+    padding-left:5%;
+}
+
+/* Log In
+-------------------------------------------------------------- */
+#login{
+     margin-top:25%;
+     margin-left:25%;
+     background-color:#bbbab9;
+     width:45%;
+     padding-left:15px;
+     padding-top:20px;
+     padding-bottom:20px;
+     border:#000;
+     border-style:double;
+}
+#login h1, #login form, #login #error{
+	color:#fff;
+	margin-bottom:15px;
+}
+
+ label,  input {
+  display: inline-block;
+}
+ label {
+  min-width: 80px;
+}
+ input{
+	margin-bottom:1%;
+	width:90%;
+	height:25px;
+}
+
+/* Register
+-------------------------------------------------------------- */
+
+#register{
+     margin-top:5%;
+     margin-left:25%;
+     background-color:#bbbab9;
+     width:45%;
+     padding-left:15px;
+     padding-top:20px;
+     padding-bottom:20px;
+     border:#000;
+     border-style:double;
+}
+#register h1, #register form, #register #error{
+	color:#fff;
+	margin-bottom:15px;
+}
+#register #submit, #login #submit{
+	width:20%;
+
+}
+
+/* Policy
+-------------------------------------------------------------- */
+.classname {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	background-color:#ededed;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:Arial Black;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	width:200px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.classname:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	background-color:#dfdfdf;
+}.classname:active {
+	position:relative;
+	top:1px;
+}
+
+/* About
+-------------------------------------------------------------- */
+#aboutCol1{
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:20px;
+}
+
+#aboutCol2, #aboutCol3, #aboutCol4{
+	width:50%;
+	padding-bottom:15px;
+	text-align:justify;
+}
+#aboutCol5{
+	float: right;
+	position: absolute;
+	top: 165px;
+	right: 50px;
+}
+#aboutImg{
+	width:50%;
+}
+
+/* Contact
+-------------------------------------------------------------- */
+#contactCol3, #contactCol4, #contactCol5{
+	text-align:justify;
+	width:50%;
+}
+
+#googleMap{
+	position: absolute;
+	top: 60px;
+	right: 328px;
+}
+
+/* Admin
+-------------------------------------------------------------- */
+#adminForm #submit, #submit, #submit2{
+	width:9%;
+}
+#adminForm{
+	text-align:center;
+}
+
+/* User Info Form (user.php)
+-------------------------------------------------------------- */
+#userInfo{
+	text-align:right;
+	margin-top:15px;
+}

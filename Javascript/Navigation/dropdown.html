@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+	<!-- Tutorial found http://javascript-array.com/scripts/jquery_simple_drop_down_menu -->
+	<meta charset="utf-8">
+	<title>Dropdown | Navigation</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	
+
+
+<!-- DROPDOWN EFFECT
+**************************************** -->
+<!-- Notes: So, the script. Bind event handlers with a first-level li-nodes. 
+	If mouse over the button - close old layer(if it visible) and open new. 
+	When mouse out from button - turn on the timer to 500 milliseconds to close all layers.
+    That's all :) -->
+
+
+<script>
+	var timeout    = 500;
+	var closetimer = 0;
+	var ddmenuitem = 0;
+
+	function jsddm_open(){  
+	   jsddm_canceltimer();
+	   jsddm_close();
+	   ddmenuitem = $(this).find('ul').css('visibility', 'visible');
+	}
+
+	function jsddm_close(){  
+		if(ddmenuitem) {
+			ddmenuitem.css('visibility', 'hidden')
+		}
+
+	}
+
+	function jsddm_timer(){  
+		closetimer = window.setTimeout(jsddm_close, timeout);
+	}
+
+	function jsddm_canceltimer(){
+		if(closetimer){  
+		  window.clearTimeout(closetimer);
+	      closetimer = null;
+	    }
+	}
+
+	$(document).ready(function(){  
+	   $('#jsddm > li').bind('mouseover', jsddm_open)
+	   $('#jsddm > li').bind('mouseout',  jsddm_timer)
+	});
+
+	document.onclick = jsddm_close;
+
+
+</script>
+
+
+
+
+<!-- *********************************** -->
+
+
+	<!-- Styling the dropdown -->
+	<style>
+		#jsddm{ /* Gets rid of default padding */
+			margin:0;
+			padding:0;
+		}
+
+		    #jsddm li{ /* Puts all first level navs in a row 
+		    	        * Gets rid of List Style and changes font*/
+		    	float: left;
+		    	list-style:none;
+		    	font:12px Tahoma, Arial;
+		    }
+		    #jsddm li a{
+		    	display:block;
+		    	background: #20548E;
+		    	padding: 5px 12px;
+		    	text-decoration:none;
+		    	border-right: 1px solid #fff;
+		    	width: 70px;
+		    	color: #EAFFED;
+		    	white-space: nowrap; /* Specify that the text element will never wrap */
+		    }
+
+		    #jsddm li a:hover{ /* When cursor is over an element it will change the background color to a darker shade.*/
+		    	background: #1A4473;
+
+		    }
+		    		#jsddm li ul{ /* Hides all subnavs
+		    		               * Gets rid of all subnav */
+		    			margin:0;
+		    			padding:0;
+		    			position:absolute;
+		    			visibility: hidden;
+		    			border-top: 1px solid #fff;
+		    		}
+		    		#jsddm li ul li{
+		    			float:none;
+		    			display:inline;
+		    		}
+		    		#jsddm li ul li a{
+		    			width:auto;
+		    			background:#9F1B1B;
+		    		}
+		    		#jsddm li ul li a:hover{
+		    			background:#7F1616;
+		    		}
+	</style>
+</head>
+<body>
+	
+   <div id="container">
+   		<nav>
+   			<!-- #jsddm align elements in the first level in a row. Sets up all a-tags and hides inner unorderlists  -->
+   			<ul id="jsddm">
+   				<li> <a href="#"> Test 1 </a>
+   					   <ul>
+   					   	   <li><a href="#"> Sub1.1 </a></li>
+   					   	   <li><a href="#"> Sub1.2 </a></li>
+   					   	   <li><a href="#"> Sub1.3 </a></li>
+   					   </ul>
+   				</li>
+   				<li> <a href="#"> Test 2 </a>
+   					<ul>
+   						<li><a href="#"> Sub2.1 </a></li>
+   						<li><a href="#"> Sub2.2 </a></li>
+   						<li><a href="#"> Sub2.3 </a></li>
+   						<li><a href="#"> Sub2.4 </a></li>
+   						<li><a href="#"> Sub2.5 </a></li>
+   					</ul>
+   				</li>
+   				<li><a href="#"> Test 3 </a></li>
+   				<li><a href="#"> Test 4 </a></li>
+   				<li><a href="#"> Test 5 </a></li>
+   		    </ul>
+   		</nav>
+   </div>
+
+</body>

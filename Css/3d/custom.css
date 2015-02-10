@@ -1,0 +1,212 @@
+/*------------ Reset Browser Defaults ------------------*/
+* { outline-style: none; -webkit-text-size-adjust: none; }
+h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset { margin:0; padding:0; }
+input { margin: 0; }
+a img,:link img,:visited img { border: none; }
+ol,ul{list-style:none;}
+th{text-align:left;}
+h1,h2,h3,h4{font-size:100%;}
+q:before,q:after{content:'';}
+pre,code{font:115% monospace; font-size:100%;}
+th{text-align:left;}
+cite,code,th,address,footer{font-style:normal;font-weight:normal;}
+body { font-size:62.5%; }
+input, textarea {-webkit-border-radius: 0;}
+a{cursor:pointer;}
+/*--------------------------------------------------------------------*/
+
+#wrapper{
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+}
+#container{
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+}
+
+
+/* ADD COLOR */
+.back{
+	background-color:red;
+}
+.top{
+	background-color:yellow;
+}
+.left{
+	background-color:green;
+}
+.right{
+	background-color:orange;
+}
+
+/* Create an element to act as a stage, give depth by using css
+Perspective property: */
+
+.stage{
+	width: 300px; 
+	height:300px;
+	-webkit-perspective: 1600px;
+	-webkit-perspective: 50% -240px;
+}
+
+/*Setting the perspective value higher creates a more subtle 3D effect; 
+lower makes it more pronounced. 
+A value of 800 pixels or so tends to look good for most small objects,
+but if you're creating something larger, such as a skyscraper,
+you may want to use a smaller value to create more extreme angles. 
+When setting perspective, it's also necessary to set a perspective-origin 
+(the position of the virtual camera looking onto the scene), 
+positionable in the X and Y axis.*/
+
+           /* ---  --- */
+/* Give the figure elements a shape and style: */
+
+figure{
+	display:block;
+	position:absolute;
+	width: 300px;
+	height: 300px;
+	background-color: #60c2ef;
+}
+
+
+/*Transforms in CSS are made up of a sequence of instructions 
+that tell a shape to move, rotate, skew and scale. 
+They read from left to right.*/
+
+
+.cube{
+	-webkit-transform-style: preserve-3d;
+}
+figure{
+	-webkit-transform-origin: 50% 50% 0;
+}
+.front{
+	-webkit-transform: translateZ(150px);
+}
+.back{
+	-webkit-transform: rotateY(180deg) translateZ(150px);
+}
+
+
+/*The front figure is translated 150px outward; 
+the back flips 180 degrees and moves 150px toward the back of the scene. 
+The ordering matters here - the transform rules are applied from left to right. 
+The second transform on the back figure is a positive number: as it's been rotated, 
+its front face is facing toward the back of the scene. As before, the order of the transform rules matters. 
+If an item is rotated, it's Z axis will be at a different angle and any translation will be affected. 
+Now, place the other sides: */
+
+
+.top{
+	-webkit-transform: rotateX(90deg) translateZ(150px);
+}
+.bottom{
+	-webkit-transform: rotateX(-90deg) translateZ(150px);
+}
+.left{
+	-webkit-transform: rotateY(-90deg) translateZ(150px);
+}
+.right{
+	-webkit-transform: rotateY(90deg) translateZ(150px);
+}
+
+
+/*Having the figure rotate on the stage using css animation*/
+@-webkit-keyframes rotate{
+	  0% { 
+	  	-webkit-transform: rotateY(0);
+	  }
+	  100% { 
+	  	-webkit-transform: rotateY(360deg);
+	  }
+}
+
+/*Apply the above code to the figure*/
+.cube { 
+	-webkit-animation: rotate 10s infinite linear; 
+}
+
+
+
+/*SHADING*/
+
+/*Pseudo-selectors are like extra HTML elements that can be inserted before and after the contents of an element. 
+They give us extra elements to work with and can contain gradients, colours or even text. 
+So we can animate shading on each of the cube's surfaces, we need two gradients - 
+one for when the surface is turning to the left, the other when turning to the right:*/
+
+
+figure:before, figure:after {
+  content: ""; display: block; position: absolute;
+  width: 100%; height: 100%; opacity: 0;
+}
+figure:before {
+  background: -webkit-radial-gradient(top left, rgba(0, 0, 0, 0.5), #000000);
+}
+figure:after {
+  background: -webkit-radial-gradient(top right, rgba(0, 0, 0, 0.5), #000000);
+}
+.front:before { 
+	-webkit-animation: frontShading1 10s infinite linear; 
+}
+
+@-webkit-keyframes frontShading1 {
+  2% { opacity: 0; }
+  25% { opacity: 0.8; }
+  35% { opacity: 0.8; }
+  50% { opacity: 0; }
+}
+
+/*TOP and BOTTOM*/
+
+/*Add gradient to top and bottom to make it looks like its not moving*/
+.top:after {
+  opacity: 0.5; width: 200%; height: 200%;
+  margin-left: -50%; margin-top: -50%;
+  background: -webkit-radial-gradient(bottom, rgba(0, 0, 0, 0), #000000);
+-webkit-animation: rotateTop 10s infinite linear;
+}
+
+@-webkit-keyframes rotateTop {
+  0% { 
+  	-webkit-transform: rotateZ(0); 
+  }
+  100% {
+   -webkit-transform: rotateZ(360deg); 
+  }
+}
+
+/*The cube bottom won't be visible but we can use it to add a box-shadow: */
+.bottom {
+  -webkit-box-shadow: 0 10px 100px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+/*REFLECTIONS*/
+
+/*As if animated shading and a shadow wasn't enough, 
+we can add a little more shine to the scene using some
+fancy WebKit filters (note this is currently a WebKit-only feature).S*/
+
+figure {
+  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(RGBA(0, 0, 0, 0.1)));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

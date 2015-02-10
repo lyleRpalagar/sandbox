@@ -1,0 +1,18 @@
+#block all webpages  [delete this line once implemented]
+
+User-agent: *
+Disallow: /
+
+
+#block certain pages like css , js,ect  [delete this line once implemented]
+
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+
+
+
+#block certain webpages  [delete this line once implemented]
+
+User-agent: * 
+Disallow: websitename/page.php/

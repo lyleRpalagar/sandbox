@@ -1,0 +1,27 @@
+.hide{
+	display:none;
+}
+.show{
+	display:block;
+}
+
+/* HOME */
+#homeImg{
+	width:250px;
+	height:250px;
+	margin: 0 auto;
+}
+
+.col{
+	width:50%;
+	float:left;
+	margin-left:10%;
+}
+
+#col2Container{
+	display:inline;
+}
+
+.clear{
+	clear:both;
+}

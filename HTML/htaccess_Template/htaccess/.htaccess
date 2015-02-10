@@ -1,0 +1,30 @@
+# Redirect 301, oldsite pages =>  newsite pages
+#below is the list of pages that needed to be redirect from the old site to the new site.
+#Redirect 301 /Oldsite/example.php http://www.newdomain.com/example
+#Redirect 301 /Oldsite/example.php http://www.newdomain.com/example
+#Redirect 301 /Oldsite/example.php http://www.newdomain.com/example
+#Redirect 301 /Oldsite/example.php http://www.newdomain.com/example
+#Redirect 301 /Oldsite/example.php http://www.newdomain.com/example
+#Redirect 301 /Oldsite/ http://www.newdomain.com
+
+
+
+
+# put on the old page , this is called a php redirect block , it forces the redirect before it loads the page
+#<?
+#Header( "HTTP/1.1 301 Moved Permanently" ); 
+#Header( "Location: http://www.newdomain.com/newpage.php" ); 
+#?>
+
+
+#Redirect non-www website to www- website
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+
+#to change www- website to non-www website
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^my-domain\.com$ [NC]
+RewriteRule ^(.*)$ http://my-domain.com/$1 [R=301,L]
+#for this one you need to change 'my-domain' with your domain name!

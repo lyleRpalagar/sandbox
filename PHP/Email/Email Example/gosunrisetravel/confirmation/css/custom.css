@@ -1,0 +1,365 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,400italic);
+
+
+/*Desktop CSS*/
+@media(min-width:1025px){
+
+.thank-you-page-text{
+font-family:"lato";
+}
+
+.thank-you-page-text h1{
+font-size:40px;
+font-weight:300;
+line-height:42px;
+float:center;
+padding:30px 10px 0px 30px !important;
+}
+
+.thank-you-page-text p{
+font-size: 20px;
+padding: 0px 20px 0px 30px;
+margin-top: 15px;
+font-weight: 300;
+line-height: 22px;
+}
+
+.thank-you-page-facebook{
+padding:0px 10px 0px 30px;
+}
+
+.sub-header{
+background-color: rgba(240,240,240,240) !important;
+}
+
+.footer-container {
+display:none;
+}
+
+.confirmationForm{
+margin-top: 5%;
+margin-left: 10%;
+margin-bottom: 5%;
+}
+
+/*Below is the CSS for the form submission page*/
+form .transparentBackground h1 {
+font-size:40px;
+font-weight:300;
+line-height:42px;
+float:center;
+padding:0px 10px 0px 30px;
+}
+
+form .transparentBackground p {
+font-size: 20px;
+padding: 0px 20px 0px 30px;
+margin-top: 5px;
+font-weight: 300;
+line-height: 22px;
+}
+
+.transparentBackground {
+background-color: rgba(240,240,240,0.9);
+}
+
+.policyDiv p {
+font-family:"lato";
+font-size:10px !important;
+line-height:12px !important;
+font-style: italic;
+}
+
+#fullName {
+width:301px !important;
+margin-left:30px;
+}
+
+#email {
+width:301px !important;
+margin-left:30px;
+}
+
+#telephone {
+width:301px !important;
+margin-left:30px;
+}
+
+#arrive {
+margin-left:30px;
+}
+
+#formButton {
+padding: 0px 0px 16px 0px;
+padding: 15px 15px 15px 15px;
+margin-left: 0%;
+margin-top: 5px;
+margin-bottom: 30px;
+background: linear-gradient(to bottom, rgba(253,255,207,1) 25%,rgba(249,255,97,1) 100%);
+color: #2D6E9C;
+}
+
+.image{
+background-size: auto;
+}
+
+body#home #navHome, body#destinations #navDestinations, body#specials #navSpecials, body#about #navAbout, body#contact #navContact, body#blog #navBlog {
+display:none;
+}
+
+}
+
+
+
+
+
+
+/*Tablet CSS*/
+@media(min-width:650px) and (max-width:1024px){
+
+.thank-you-page-text{
+font-family:"lato";
+}
+
+.thank-you-page-text h1{
+font-size:40px;
+font-weight:300;
+line-height:42px;
+float:center;
+padding:30px 10px 0px 30px !important;
+}
+
+.thank-you-page-text p{
+font-size: 20px;
+padding: 0px 20px 0px 30px;
+margin-top: 15px;
+font-weight: 300;
+line-height: 22px;
+}
+
+.thank-you-page-facebook{
+padding:0px 10px 0px 30px;
+}
+
+.sub-header{
+background-color: rgba(240,240,240,240) !important;
+}
+
+.footer-container {
+display:none;
+}
+
+.confirmationForm{
+margin-top: 10%;
+margin-left: 10%;
+margin-bottom: 5%;
+}
+
+/*Below is the CSS for the form submission page*/
+form .transparentBackground h1 {
+font-size:40px;
+font-weight:300;
+line-height:42px;
+float:center;
+padding:0px 10px 0px 30px;
+}
+
+form .transparentBackground p {
+font-size: 20px;
+padding: 0px 20px 0px 30px;
+margin-top: 5px;
+font-weight: 300;
+line-height: 22px;
+}
+
+.transparentBackground {
+background-color: rgba(240,240,240,0.9);
+}
+
+.policyDiv p {
+font-family:"lato";
+font-size:10px !important;
+line-height:12px !important;
+font-style: italic;
+}
+
+#fullName {
+width:301px !important;
+margin-left:30px;
+}
+
+#email {
+width:301px !important;
+margin-left:30px;
+}
+
+#telephone {
+width:301px !important;
+margin-left:30px;
+}
+
+#arrive {
+margin-left:30px;
+}
+
+#formButton {
+padding: 0px 0px 16px 0px;
+padding: 15px 15px 15px 15px;
+margin-left: 0%;
+margin-top: 5px;
+margin-bottom: 30px;
+background: linear-gradient(to bottom, rgba(253,255,207,1) 25%,rgba(249,255,97,1) 100%);
+color: #2D6E9C;
+}
+
+.image{
+background-size: auto;
+}
+
+}
+
+
+
+
+
+/*Mobile CSS*/
+@media(min-width:0px) and (max-width:650px){
+
+body {
+overflow: hidden;
+}
+
+.thank-you-page-text{
+font-family:"lato";
+}
+
+.thank-you-page-text h1{
+font-size:40px;
+font-weight:300;
+line-height:42px;
+float:center;
+padding:30px 10px 0px 30px !important;
+}
+
+.thank-you-page-text p{
+font-size: 20px;
+padding: 0px 20px 0px 30px;
+margin-top: 15px;
+font-weight: 300;
+line-height: 22px;
+}
+
+.thank-you-page-facebook{
+padding:0px 10px 0px 30px;
+}
+
+.transparentBackground {
+position: relative;
+margin-top: 45px;
+width: 100%;
+border-radius: 0%;
+}
+
+.nav{
+display:none;
+}
+
+.confirmationForm{
+position:inherit;	
+}
+
+.footer-container {
+padding-bottom: 10px;
+padding-top: 0px;
+position:inherit;
+
+}
+
+#stickyFooter{
+position:inherit; 
+bottom:0; 
+width:100%;
+}
+
+.sub-header{
+height: 70px;
+background-color: rgba(240,240,240,240) !important;
+}
+
+.socialMediaTop img{
+margin-top: 5px;
+}
+
+/*Below is the CSS for the form submission page*/
+form .transparentBackground h1 {
+font-size:40px;
+font-weight:300;
+line-height:42px;
+float:center;
+padding:0px 10px 0px 30px;
+}
+
+form .transparentBackground p {
+font-size: 20px;
+padding: 0px 20px 0px 32px;
+margin-top: 5px;
+margin-right: 20%;
+font-weight: 300;
+line-height: 22px;
+}
+
+.transparentBackground {
+background-color: rgba(240,240,240,0.9);
+}
+
+.policyDiv p {
+font-family:"lato";
+font-size:10px !important;
+line-height:12px !important;
+font-style: italic;
+}
+
+#fullName {
+width:70% !important;
+margin-left:30px;
+}
+
+#email {
+width:70% !important;
+margin-left:30px;
+}
+
+#telephone {
+width:70% !important;
+margin-left:30px;
+}
+
+#arrive {
+width: 33.25%;
+margin-left: 30px;
+}
+
+#depart{
+width: 33.25%;
+margin-left: 1%;	
+}
+
+#formButton {
+padding: 0px 0px 16px 0px;
+padding: 15px 15px 15px 15px;
+margin-left: -8%;
+margin-top: 5px;
+margin-bottom: 30px;
+background: linear-gradient(to bottom, rgba(253,255,207,1) 25%,rgba(249,255,97,1) 100%);
+color: #2D6E9C;
+}
+
+.image{
+background-size: 500%;
+}
+
+}
+
+#required-p{
+display: none;
+}

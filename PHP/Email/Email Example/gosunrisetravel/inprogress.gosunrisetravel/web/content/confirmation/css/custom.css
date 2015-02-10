@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,400italic);
+
+.thank-you-page-text{
+font-family:"lato";
+}
+
+.thank-you-page-text h1{
+font-size:40px;
+font-weight:300;
+line-height:42px;
+float:center;
+padding:30px 10px 0px 30px;
+}
+
+.thank-you-page-text p{
+font-size: 20px;
+padding: 0px 20px 0px 30px;
+margin-top: 15px;
+font-weight: 300;
+line-height: 22px;
+}
+
+.thank-you-page-facebook{
+padding:0px 10px 0px 30px;
+}
+
+.thank-you-page-link-back{
+padding: 14px;
+font-size: 10px;
+margin-left: 290px;
+}

@@ -1,0 +1,262 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);
+
+
+/*------------ Reset Browser Defaults ------------------*/
+* { outline-style: none; -webkit-text-size-adjust: none; }
+h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset { margin:0; padding:0; }
+input { margin: 0; }
+a img,:link img,:visited img { border: none; }
+ol,ul{list-style:none;}
+th{text-align:left;}
+h1,h2,h3,h4{font-size:100%;}
+q:before,q:after{content:'';}
+pre,code{font:115% monospace; font-size:100%;}
+th{text-align:left;}
+cite,code,th,address,footer{font-style:normal;font-weight:normal;}
+body { font-size:62.5%; }
+input, textarea {-webkit-border-radius: 0;}
+a{cursor:pointer;}
+input, select, textarea, button{font-family:inherit;}
+/* -------------------------------------------------------------------- */
+
+/* Font 
+----------------------------------------------------------------------- */
+*{
+	font-family: 'Lato', sans-serif;
+}
+/* -------------------------------------------------------------------- */
+
+
+/* Container & Body
+----------------------------------------------------------------------- */
+#container{
+	margin:0px auto;
+	max-width:1000px;
+	width:90%;
+	height:auto;
+	position:relative;
+}
+body{
+   background: #E6E7E8;
+   font-family: 'Lato', sans-serif;
+   font-size:13pt;
+   font-weight:300;
+   color:#58595B;
+}
+.clear{
+	clear:both;
+}
+.hide{
+	display:none;
+}
+.show{
+	display:block !important;
+}
+/* -------------------------------------------------------------------- */
+
+/* Navigation 
+----------------------------------------------------------------------- */
+#nav #logo{
+	float:left;
+	margin-left:10%;
+	font-size:24px;
+}
+#nav_wrapper{
+	float:right;
+	width:30%;
+}
+#nav ul{
+	position:relative;
+	padding:0;
+	margin:0;
+}
+#nav ul li{
+	display:inline-block;
+	margin-left:5%;
+}
+#nav a{
+   text-decoration:none;
+   color:#fff;
+   text-align:right;
+   font-size:18px;
+}
+#nav{
+	background-color:#000;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:15px;
+}
+#nav ul li a:hover{
+	text-decoration:underline;
+	opacity:0.5;
+}
+
+/*Hamburger Icon*/
+#nav-toggle {
+	display:none;
+}
+
+
+
+/*Drop Down */
+#nav ul li:hover .dropdown{
+	display:block;
+	position:absolute;
+	padding-top:10px;
+}
+#nav ul li:hover .dropdown li{
+	padding-top:15px;
+	padding-bottom:20px;
+
+}
+#nav ul .dropdown{
+	display:none;
+	background-color:#000;
+}
+#nav li .dropdown li{
+	display:block;
+	width:150px;
+}
+#nav #arrow{
+	display:none;
+}
+/* -------------------------------------------------------------------- */
+
+
+/* Footer
+----------------------------------------------------------------------- */
+#footer{
+	/*position:absolute;*/
+	margin:0px auto;
+	bottom:0;
+/*  height:20px;
+	min-height:34px;*/
+	background-color:#000;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:15px;
+}
+#copyright{
+	color:#fff;
+	padding-left:10%;
+}
+/* -------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Phone 
+----------------------------------------------------------------------- */
+@media (max-width:500px){
+	
+/* Navigation */
+	#nav_wrapper{
+		clear:both;
+		float:left;
+		width:100%;
+		display:none;	
+	}
+	#nav_wrapper ul li{
+		display:block;
+		margin-top:15%;
+		margin-bottom:5%;
+	}
+
+	/* - Drop Down */
+	#nav ul li:hover .dropdown{
+		position:relative;
+		color:yellow;
+	}
+	#nav ul .dropdown{
+		width:20%;
+		margin-left:20%;
+	}
+	#nav #arrow{
+	display:inline;
+	font-size:12px;
+    }
+
+    /* - Hamburger Icon*/
+
+    #nav-toggle{
+    	display:block;
+    	float:right;
+    	margin-right:15%;
+    	margin-top:4%;
+    }
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	  cursor: pointer;
+	  border-radius: 1px;
+	  height: 5px;
+	  width: 35px;
+	  background: white;
+	  position: absolute;
+	  display: block;
+	  content: '';
+	}
+	#nav-toggle span:before {
+	  top: -10px;
+	}
+	#nav-toggle span:after {
+	  bottom: -10px; 
+	}
+	#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	  transition: all 500ms ease-in-out;
+	}
+	#nav-toggle.active span {
+	  background-color: transparent;
+	}
+	#nav-toggle.active span:before, #nav-toggle.active span:after {
+	  top: 0;
+	}
+	#nav-toggle.active span:before {
+	  transform: rotate(45deg);
+	}
+	#nav-toggle.active span:after {
+	  transform: rotate(-45deg);
+	}
+/* Footer */
+#footer{
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+
+} /*end of phone*/
+/* -------------------------------------------------------------------- */

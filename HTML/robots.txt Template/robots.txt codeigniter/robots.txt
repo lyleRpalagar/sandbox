@@ -1,0 +1,18 @@
+user-agent: *
+disallow: /images/
+disallow: /css/
+disallow: /js/
+disallow: /assets/
+disallow: /classes/
+disallow: /captcha/
+disallow: /admin/
+disallow: /system/ /* this is for codeigniter */
+disallow: /application/confiq/ /* this is for codeigniter */
+disallow: /application/controllers/ /* this is for codeigniter */
+disallow: /application/errors/ /* this is for codeigniter */
+disallow: /application/helpers/ /* this is for codeigniter */
+disallow: /application/hooks/ /* this is for codeigniter */
+disallow: /application/models/ /* this is for codeigniter */
+disallow: /application/libraries/ /* this is for codeigniter */
+disallow: /application/language/ /* this is for codeigniter */
+disallow: www.example.com/example

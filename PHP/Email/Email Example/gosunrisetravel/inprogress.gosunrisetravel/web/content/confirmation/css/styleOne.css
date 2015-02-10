@@ -1,0 +1,191 @@
+
+/* ____________ Form ____________*/
+
+.confirmationForm{ /*THIS WILL MOVE THE POSITION OF THE FORM  FROM UP,DOWN,LEFT,RIGHT*/
+		position:absolute; 
+		top:20%; /*POSITIVE NUMBER IS TO MOVE FORM UP, NEGATIVE NUMBER IS TO MOVE FORM DOWN*/
+		left:10%;/*POSITIVE NUMBER IS TO MOVE FORM TO THE RIGHT , NEGATIVE NUMBER IS TO MOVE FORM TO THE LEFT*/
+}
+
+.transparentBackground{
+	background-color: rgba(240,240,240,.5); /* THIS WILL CHANGE THE COLOR OF THE TRANSPARENT BACKGROUND OF THE FORM*/
+	border-radius: 3%; /* THIS WILL CONTROL THE ROUNDNESS OF THE CORNERS OF THE FORM'S TRANSPARENT BACKGROUND*/
+	width:370px;                      /*THIS WILL RESIZE THE WIDTH OF THE FORM*/
+	padding-left:2%; /* THIS WILL CHANGE THE SPACING FROM THE TEXT INSIDE THE FORM*/ /*[SEE padding-left of .transparentBackground] */
+	position: relative;
+	top:-20px;
+}
+
+.confirmationFormContent{
+	text-align:justify;  /*THIS WILL ALIGN THE CONTENT INSIDE THE FORM [LEFT, RIGHT, OR JUSTIFY]*/
+	height: 4em; /*THIS WILL CHANGE THE SPACING BETWEEN TOP OF THE INPUT FIELD AND THE BOTTOM OF THE FIRST PARAGRAPH */
+	line-height: 1.2em; /*THIS WILL CHANGE THE FIRST PARAGRAPHS SPACING INBETWEEN THEM */
+	font-family: "Lato";
+}
+
+#policyDiv{
+	text-align:justify; /*[SEE .confirmationFormContent] */
+
+}
+
+.confirmationPolicyContent{
+	font-size: 9px;
+	font-family: "Lato";
+	height: 4em; /*THIS WILL CONTROL THE SPACING BETWEEN THE BOTTOM OF THE POLICY CONTENT AND THE SUBMIT BUTTON */
+	line-height: 0.9em !important;
+}
+
+
+/* _________________________________ [DO NOT TOUCH [REFERING TO MARKETING ]________________________________________ */
+#stickyFooter{
+	position:fixed; 
+	bottom:0; 
+	width:100%;
+}
+
+#formButton{
+	padding:0px 0px 16px 0px;
+	padding: 9px 1px 10px 8px;
+	margin-left: 33%;margin-top: -1px;
+	background: rgb(106,168,206);
+	background: -moz-linear-gradient(top, rgba(106,168,206,1) 25%, rgba(61,122,160,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(25%,rgba(106,168,206,1)), color-stop(100%,rgba(61,122,160,1)));
+	background: -webkit-linear-gradient(top, rgba(106,168,206,1) 25%,rgba(61,122,160,1) 100%);
+	background: -o-linear-gradient(top, rgba(106,168,206,1) 25%,rgba(61,122,160,1) 100%);
+	background: -ms-linear-gradient(top, rgba(106,168,206,1) 25%,rgba(61,122,160,1) 100%);
+	background: linear-gradient(to bottom, rgba(106,168,206,1) 25%,rgba(61,122,160,1) 100%);
+	-webkit-box-shadow: inset 0 0 5px#888;
+	box-shadow: inner 0 0 5px #888;
+	border-radius: 6px;
+	cursor: pointer;
+	width:60%;
+	color:#fff;
+	font-size:16px;
+	}
+
+
+/*Transitions of the placeholders on the Form*/
+
+/*http://css-tricks.com/hang-on-placeholders*/
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.3s 0.3s ease; 
+  opacity: 0;
+}
+input {
+  border: 1px solid silver;
+  padding: 3px;
+}
+
+/*Placeholder input */
+input{
+color: grey;
+opacity: .83;
+}
+
+form .transparentBackground h1{
+	margin-bottom:0;
+}
+
+.inputBoxSizing1, .error{
+	line-height:2em;
+	width:25em;
+}
+
+#inputBoxSizing2{
+	line-height:2em;
+	width:25em;
+}
+
+#inputBoxSizing3{
+	line-height:2em;
+	width:25em;
+}
+
+/* Css for Form validation */
+
+#fullName{
+	line-height:2em;
+	width:25em;	
+}
+.error{
+	border:solid #800000 !important;
+}
+
+#email{
+	line-height:2em;
+	width:25em;
+}
+#telephone{
+	line-height:2em;
+	width:25em;
+}
+
+/* _________________________________ [DO NOT TOUCH [REFERING TO MARKETING ]________________________________________ */
+
+
+
+
+/* MEDIA QUERIES */ 
+
+
+/*_______________________________| 1074px |_________________________ */
+@media(max-width:1074px){
+	.transparentBackground{
+		top:-39px;
+	}
+}
+
+
+/*______________________________ | 1024px | ________________________*/
+
+
+@media(max-width:1024px){
+	.transparentBackground{
+		position:relative;
+		top:-20px;
+	}
+	.image{
+		background-image: url('/confirmation/images/bg2.png');
+	
+		background-size: 100%;
+	}
+}
+
+/*______________________________ | 720px | ________________________*/
+
+
+@media(max-width:900px){
+
+	.image{
+		background-image: url('/confirmation/images/bg2.png');
+	
+		background-size: 150%;
+	}
+	
+}
+
+
+/*______________________________ | 650px | ________________________*/
+
+
+@media(max-width:650px){
+	.footer-container{
+		display:none;
+	}
+	
+	.confirmationForm{
+		padding-top:200px;
+		position:absolute;	
+	}
+	.image{
+		background-image: url('/confirmation/images/bg2.png');
+	
+		background-size: 500% 1500%;
+	}
+	.transparentBackground{
+		margin-top:110px;
+		margin-bottom:10px;
+	}
+	
+}

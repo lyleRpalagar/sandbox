@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			button{
+				width:80px;
+				height:30px;
+				color:#fff;
+				background-color:#1C75BC;
+				border:none;
+				cursor:pointer;
+				margin-left:95px;
+			}
+			#player1, #player2{
+				width:100px;
+				height:90px;
+				border:solid #000;
+				float:left;
+				margin:25px;
+			}
+			.clear{
+				clear:both;
+			}
+			#p1, #p2{
+				font-size:24px;
+				padding-top:25px;
+				text-align:center;
+			}
+			#results{
+				margin-left:70px;
+				margin-bottom:25px;
+				font-size:25px;
+			}
+		</style>
+		<script>
+			function calculate(){
+				var player1 = p1();
+				var player2 = p2();
+				var r = result(player1, player2);
+				document.getElementById('p1').innerHTML = player1;
+				document.getElementById('p2').innerHTML = player2;
+				document.getElementById('results').innerHTML = r;
+
+			}
+			function p1(){
+				var x = Math.floor(Math.random()*11);
+				return x;
+			}
+			function p2(){
+				var y = Math.floor(Math.random()*11);
+				return y;
+			}
+			function result(player1, player2){
+				var player1 = player1;
+				var player2 = player2;
+					 if (player1 < player2 || player2 > player1){
+					 	var display = "Player 2 wins!";
+					 	return display;
+					 }
+					 else if(player1 > player2 || player2 < player1){
+					 	var display = "Player 1 wins!";
+					 	return display;
+					 }
+					 else if (player1 == player2){
+					 	var display = "Tie!";
+					 	return display;
+					 }
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div id="player1">
+				<div id="p1"> Player 1</div>
+		</div>
+		<div id="player2">
+				<div id="p2">Player 2</div>
+		</div>
+		<div class="clear"></div>
+		<div id="results"></div>
+		
+			<button type="button" onclick="calculate()">Roll</button>
+	</body>
+</html>

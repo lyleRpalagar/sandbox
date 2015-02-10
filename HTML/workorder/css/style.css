@@ -1,0 +1,478 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic);
+
+
+/*------------ Reset Browser Defaults ------------------*/
+* { outline-style: none; -webkit-text-size-adjust: none; }
+h1,h2,h3,h4,h5,h6,pre,code { font-size:1em; }
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset { margin:0; padding:0; }
+input { margin: 0; }
+a img,:link img,:visited img { border: none; }
+ol,ul{list-style:none;}
+th{text-align:left;}
+h1,h2,h3,h4{font-size:100%;}
+q:before,q:after{content:'';}
+pre,code{font:115% monospace; font-size:100%;}
+th{text-align:left;}
+cite,code,th,address,footer{font-style:normal;font-weight:normal;}
+body { font-size:62.5%; }
+input, textarea {-webkit-border-radius: 0;}
+a{cursor:pointer;}
+input, select, textarea, button{font-family:inherit;}
+
+/*--------------------------------------------------------------------*/
+
+a:visited{
+	color:blue;
+}
+body{
+   background: #E6E7E8;
+   font-family: 'Lato', sans-serif;
+   font-size:13pt;
+   font-weight:300;
+   color:#58595B;
+}
+
+button, #header{
+	background:#1C75BC;
+	color:#fff;
+	padding:15px;
+	
+}
+
+button{
+	outline:none;
+	border:none;
+	margin-top:15px;
+	min-width: 100px;
+	float: right;
+	margin-right: -15px;
+	cursor:pointer;
+
+
+	-webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    transition: background .5s;
+}
+
+button:hover{
+	background:#2386C9;
+}
+
+button:active{
+	background:#1369A3;
+}
+
+input{
+	background:#fff;
+	color:#58595B;
+	padding-left:5px;
+	width:100%;
+	padding: 10px;
+	padding-right: 0px;
+}
+
+label{
+	margin:10px 0;
+}
+
+
+h1{
+	margin-top: 50px;
+	font-size: 30px;
+	font-weight: 100;
+	color:#58595B;
+}
+
+#email1, #password1, #cpasswor1{
+	margin:4px 0px;
+	font-size: 15px;
+	font-weight:400;
+}
+
+
+#password1 {
+	margin-top: 30px;
+}
+
+#cpassword1 {
+	margin-top: 12px;
+}
+
+#header{
+	height: 43px;
+}
+
+#header #logo{
+	height: 43px;
+	float:left;
+}
+
+#supportInfo{
+	text-align:right;
+}
+
+.phone{
+	display:none;
+}
+
+#phoneSquare{
+	width:80px;
+	height:72px;
+	background:#27AAE1;
+	float: right;
+	margin-top: -72px;
+	cursor:pointer;
+
+	-webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    transition: background .5s;
+}
+
+#phoneSquare:hover{
+	background:#2FB9EA;
+
+	-webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    transition: background .5s;
+}
+
+#phoneSquare:active{
+	background:#1794BF;
+}
+
+#phoneSquare img{
+	height: 45px;
+	margin-left: 17px;
+	margin-top: 12px;
+}
+
+#wrapper{
+	margin:0px auto;
+	max-width:1000px;
+	width:90%;
+	height:auto;
+}
+
+#loginForm{
+	margin:0 auto;
+	width:250px;
+	margin-top: 5%;
+}
+
+.clear{
+	clear:both;
+}
+
+#footer{
+	background:#1C75BC;
+	width:100%;
+	color:#fff;
+/*	position:absolute;*/
+	bottom:0;
+	padding: 15px 0;
+	height:20px;
+	min-height:34px;
+
+}
+
+
+
+
+/*---------phone--------*/
+
+@media (max-width:500px){
+
+	.phone{
+		display:block;
+	}
+
+	.desktop{
+		display:none;
+	}
+
+	#loginForm {
+		width: 90%;
+		margin-top: 10%;
+	}
+
+	input{
+		padding-top:15px;
+		padding-bottom:15px;
+		padding-left: 0px;
+		padding:right: 0px;
+	}
+
+	button {
+		margin-top: 20px;
+		min-width: 100px;
+		margin-right: 0px;
+		padding:20px;
+		min-width:125px;
+
+	}
+	#footer{
+		display:none;
+	}
+
+	::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff; 
+}
+
+:-ms-input-placeholder {  
+  color: #fff; 
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+Main Blue Color
+#1C75BC
+
+Gray
+#58595B
+
+*/
+
+
+
+
+/*  ============   Lyle's Custom.css Desktop ============ */
+/* submission.php */
+.hide{
+	display:none;
+}
+.reveal{
+	display:block;
+}
+
+
+.error{
+	color:red;
+}
+.confirm{
+	color:green;
+}
+
+
+#information{
+	text-align:right;
+	padding-right:15px;
+	margin-top:15px;
+	float:right;
+}
+.headerDescription{
+	color:#58595B;
+	opacity:0.5;
+	padding-left:25px;
+	font-size:12px;;
+}
+#pageHeader0, #pageHeader1, #pageHeader2, #pageHeader3, #pageHeader4, #pageHeader5{
+	width:25%;
+	min-width: 190px;
+	margin-bottom:5px;
+	margin-top:10px;
+}
+
+
+#add{
+	background-color:#26972D;
+	width:100.6%;
+	color:#fff;
+	outline:none;
+	border:none;
+	cursor:pointer;
+	margin-top:15px;
+}
+
+textarea{
+	margin-left:0;
+	margin-top:10px;
+}
+
+#submission{
+	outline: none;
+	border: none;
+	margin-top: 15px;
+	min-width: 100px;
+	float: right;
+	margin-right: -15px;
+	cursor: pointer;
+	-webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	-o-transition: background .5s;
+	transition: background .5s;
+	background: #1C75BC;
+	color: #fff;
+	padding: 15px;
+	width:auto;
+}
+
+#footerSub{
+	background:#1C75BC;
+	width:100%;
+	color:#fff;
+/*	position:absolute;*/
+	bottom:0;
+	padding: 15px 0;
+	height:20px;
+	min-height:50px;
+	margin-top:35px;
+}
+
+
+#wrapper:after{
+	height:20px;
+
+}
+.error{
+	padding-top:10px;
+}
+
+#inputUpdateForm{
+	width:25%;
+	min-width:200px;
+	float:right;
+	padding-top:20px;
+}
+
+#updateButton{
+	outline: none;
+	border: none;
+	margin-top: 15px;
+	min-width: 100px;
+	float: right;
+	margin-right: -15px;
+	cursor: pointer;
+	-webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	-o-transition: background .5s;
+	transition: background .5s;
+	background: #1C75BC;
+	color: #fff;
+	padding: 15px;
+	width: auto;
+}
+
+#cancel{
+	float: right;
+	padding-right: 20px;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+.subtract{
+	background-color: #BF3030;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	padding: 0;
+	float: right;
+	position: relative;
+	bottom: 205px;
+	outline:none;
+	border:none;
+}
+
+.image{
+	background:none;
+}
+
+.imageFile{
+	background: none; 
+	border: none; 
+	width: 225px; 
+	color: #26972d; 
+	float: left; 
+	font-size: 19px;
+	 height: 116px
+}
+
+textarea::-webkit-input-placeholder {
+   padding-left:9px;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+   padding-left:10px; 
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+   padding-left:10px;
+}
+
+textarea:-ms-input-placeholder {  
+   padding-left:10px;
+}
+
+#addImages, #imageDone{
+	background: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width:10%;
+}
+
+.addImage{
+	background: none;
+	outline: none;
+	border: none;
+	color: #26972D;
+	width: 87px;
+	margin-top: 5px;
+}
+
+ul, li {
+	float:left;
+}
+
+
+
+/* Register.php */
+
+#formWrapper{
+	width: 341px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4%;
+}
+
+#errorMsg{
+	color:red;
+	text-align:center;
+}
