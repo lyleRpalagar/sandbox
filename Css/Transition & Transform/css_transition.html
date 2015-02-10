@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<title> Css Transitions</title>
+  	
+  	<style>
+  		#example1{
+  			width:50px;
+  			height:50px;
+  			background-color: green;
+  			transition: height 2s; /* Please note the SPECIFIED target PROPERTY and DURATION being set. */
+                               /* width:300px; */  /*  - Potential Problem 
+                                    ** if the PROPERTY wasnt set first in
+                                       the transition than the change will still take place but 
+                                       the smoothness of the transistion will not be used 
+                                         [ uncomment for example] */
+  		}
+
+  			#example1:active{
+  				height:300px;
+  	     	  
+  			}
+
+  		#example2{
+  			width:100px;
+  			height:100px;
+  			background-color:red;
+  			transition: height 2s, width 2s; /* Please note as you are targeting multiple properties
+  			 									they must each contain a duration next to it 
+  			 									[ example : property duration, property2 duration2]. */
+  		}  	
+  			#example2:active{
+  				width:300px;
+  				height:300px;
+  			}
+        
+        #example3{
+        	width: 50px;
+        	height: 150px;
+        	background-color:blue;
+        	transition-property:width;
+        	transition-duration: 1s;
+        	transition-timing-function:linear;  /* note: there are 8 different timing-functions you can use:
+        	   									ease,linear,ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n,n), intial,and inherit; */
+        	transition-delay: 2s,1s;
+
+        	/* SAME CODE FROM ABOVE WRITTEN IN A SINGLE LINE:
+        	   transition:width 1s linear 2s   
+
+        	   Want to target more than just the width? 
+        	   transition: width 1s, height 1s linear 2s */
+
+
+        }
+             #example3:active{
+             	width:200px;
+
+             }
+  	</style>
+    <script type="text/javascript">
+       function tran(element){
+          element.style.height = "300px";                      
+       }
+       setTimeout(function({
+                 element.style.height = "400px"; // Sets the width back to the original size
+           }, 25);
+    </script>
+  
+  </head>
+  <body>
+  <!-- 
+  		Css Transistions are effects that let elements change from one style to another.
+  		- Transistions effects generally start when a css PROPERTY changes value. (an example would
+  		  a mouse over an element) [see id="example1"].
+
+  		- As you can see in id="example1" there was only one property being targeted for transitional effect
+  		  what if you want more than one css propety to be effect. Simply seperate  the properties with a comma
+  		  [see id="example2"].
+
+  		- There are four properties used with transistion they are :
+  		   1.) transition                  ** shorthand to write all four properties in a single css line.
+  		   2.) transition-delay            ** specifies when the transition will start
+  		   3.) transition-duration         ** add seconds / milliseconds to delay the transition effect
+  		   4.) transition-property         ** specifies what property you are targeting
+  		   5.) transition-timing-function  ** specifies the speed and type of the transition.
+  		   [see id="example3"].
+
+
+ *************************************************************************************************** 		
+    // - Potential Problems : 
+          ** If duration part is not specified, the transition will have no effect. 
+          ** if the property wasnt set first in the transition than the change will 
+             still take place but  the smoothness of the transistion will not be used //
+  	-->
+
+  	<div id="example1" onclick="tran(this)"></div>
+  	<div id="example2" onclick="tran2(this)"></div>
+    <div id="example3" onclick="tran3(this)"></div>
+
+    <div id="error1"   onclick="tranError(this)"></div>
+    <div id="error2"   onclick="tranError2(this)"></div>
+    <div id="error3"   onclick="tranError3(this)"></div>
+  </body>
+</html>

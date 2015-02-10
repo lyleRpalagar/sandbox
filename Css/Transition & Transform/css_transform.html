@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Css Transform </title>
+	</head>
+		<style>
+			#example1{
+				width: 50px;
+				height:50px;
+				background-color:blue;
+				transform:rotate(60deg); /* this simply tilts the element 30deg */
+			}
+			#example2{
+				width: 50px;
+				height:50px;
+				background-color:red;
+				transform:scale(2,2); /* defines a 2d Scale */
+			}
+			#example3{
+				width: 50px;
+				height:50px;
+				background-color:green;
+				transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* this simply tilts the element to a rhombas looking shape */
+			}
+			#example4{
+				width: 50px;
+				height:50px;
+				background-color:purple;
+				transform:skew(30deg,40deg); /* 2d skew along the x and y axis */
+			}
+
+
+			#example5{
+				width:250px;
+				height:50px;
+				background-color:black;
+				transition: all 4s ease; /* first define your transition effect */
+			}
+			    #example5:hover{
+			    	transform:rotate(720deg); /* second define what you want the element to do */
+			    	margin-left:420px; /* simply moves it to one side to the screen to the other */
+			    }
+			
+		</style>
+	<body>
+		<!-- 
+			Transform property applies a 2D or 3D transformation to an element
+			this allows you to roate,scale,matrix,skew,etc elements.
+				[ see id="example1 - example4" for basic transform ]
+			
+			- Transform and Transition combine 
+			    [ see id="example5"];
+
+       NOTE: too see the many different properties that transform has to offer please visit the link below:
+       http://www.w3schools.com/cssref/css3_pr_transform.asp
+
+ *************************************************************************************************** 	
+		//	Potential Problems:
+				Cross Browser Support - 
+					 ** Internet Explorer 8 and earlier versions do not support the transform property.
+
+           			 ** Internet Explorer 9 supports an alternative, the -ms-transform property. Newer
+                   	    versions of IE support the transform property (do not need the ms prefix).
+
+            		 ** Chrome, Safari and Opera supports an alternative, the -webkit-transform property. //
+
+
+	-->
+   
+   <div id="example1"></div> <br/>
+   <div id="example2"></div> <br/>
+   <div id="example3"></div> <br/>
+   <div id="example4"></div> <br/>
+   <hr/><br/>
+
+   <div id="example5"></div>
+  
+
+	</body>
+</html>

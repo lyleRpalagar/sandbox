@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  		<meta charset="utf-8">
+  		<title> Changing a DOM  style using JavaScript </title>
+  <style>
+  		#body{
+  			height:100px;
+  			width:400px;
+  			background:#11F4EB;
+  		}
+  </style>
+  </head>
+  <body>
+  	<!-- DOM = Document Object Model -->
+    <!--  <div>Hello</div> -->
+    <div id="body"></div>
+   
+    <!-- Javascript --> 
+    <script>
+    // This is selecting the element like Jquery selector $('#body')
+    	 document.querySelector('#body').style.background = "#112764";
+    	 document.querySelector('#body').style.border ='3px solid #1002FE';
+
+    	// alternate way of doing it 
+    	/*
+            document.getElementById('#body').style.background = "#112764";
+            ...
+
+    	*/
+
+
+    	// adding event listener
+    	 /* this is adding a event listener to the div id body where if a mouse hover overs it 
+    	  it will change the background color and when the mouse is not hovering over it, it changes back. */
+    	 document.querySelector('#body').addEventListener('click', function(){
+    	    document.querySelector('#body').style.background="#000";
+    	 });
+    	 document.querySelector('#body').addEventListener('dblclick', function(){
+    	   document.querySelector('#body').style.background="#112764";
+    	 });
+    </script>
+  </body>
+</html>

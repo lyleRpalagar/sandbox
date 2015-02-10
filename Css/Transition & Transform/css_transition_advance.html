@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Css Transition Adv. </title>
+			<style>
+
+
+/* ========= Testing different types of transitional effect ========== */		
+			/* setting up the play area ignore */
+				#example1, #example2{
+					position:relative;
+					width:530px;
+					height:530px;
+					margin:0 auto 10px;
+					border: 1px #aaa solid;
+					padding: 10px;
+				}
+                 	#example1:hover .test_obj{
+                 		transform:rotate(720deg); /* will look like a barrel roll*/
+                 		margin-left:420px; /* move the test_obj to the right */
+                 		background-color:#fff;
+                 	}
+                /* styling the test_objs to make it look nicer -- also ignore */ 	
+                 .test_obj{
+                 	font-size:12px;
+                 	position:relative;
+                 	width:60px;
+                 	height:60px;
+                 	margin-bottom:10px;
+                 	background-color:#eee;
+                 }
+  				 #ease.test_obj{
+                 	transition:all 4s ease;
+                 	border:1px red solid;
+                 }
+                 #ease-in.test_obj{
+                 	transition:all 4s ease-in;
+                 	border:1px green solid;
+                 }
+                 #ease-out.test_obj{
+                 	transition:all 4s ease-out;
+                 	border:1px blue solid;
+                 }
+                 #ease-in-out.test_obj{
+                 	transition:all 4s ease-in-out;
+                 	border:1px yellow solid;
+                 }
+                  #linear.test_obj{
+                 	transition:all 4s linear;
+                 	border:1px purple solid;
+                 }
+                 #negative.test_obj{
+                 	transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425); /* cool transitional effect making an object look like its getting a "run up" before it starts going */
+					border: 1px #000 dotted;
+                 }
+
+
+
+/* ========= Testing transitional and transform effect ========== */
+				
+          /* created a circle, colored it red and said when it is hovered fade out.*/
+				#big_circle{
+					width:100px;
+					height:100px;
+					position:absolute;
+					top:250px;
+					left:225px;
+					background-color:red;
+					border-radius:50px;
+					transition:all 2s ease-in-out;
+				}	
+					#example2:hover #big_circle{ /* NOTE: the reason why im targeting #example2: hover #big_circle is because
+					     							I want the user to once they hover over the box play area the effects will
+					     							happen. 
+					     							** POTENTIAL PROBLEM - If you were to not target the #example2:hover 
+					     							   #big_circle the user will have to hover over the specific element instead.
+					     						*/
+						opacity:0;
+					}
+              
+			#dd1, #dd2, #dd3, #dd4, #dd5, #dd6, #dd7, #dd8 {
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			position: absolute;
+			top: 200px;
+			left: 250px;
+			background-color: blue;
+			transform: translate3d(0,0,0); /* leaves the dots in the center */
+			transition:all 2s ease-in-out; /* creates a smooth motion */
+			}
+					#dd1 {
+						transition-delay: 0.1s;
+					}
+						#example2:hover #dd1{
+							transform: translate(0px,-130px); /* translate ( diagonal , up / down) */
+						}
+					#dd2 {
+						transition-delay: 0.1s;
+					}
+						#example2:hover #dd2{
+							transform: translate(0px,-90px); /* translate ( diagonal , up / down) */
+						}
+					#dd3 {
+						transition-delay: 0.1s;
+					}
+						#example2:hover #dd3{
+							transform: translate(0px,-50px); /* translate ( diagonal , up / down) */
+						}
+					
+					#dd4 {
+						transition-delay: 0.1;
+					}
+						#example2:hover #dd4{
+							transform: translate(0px, -10px); /* translate ( diagonal , up / down) */
+						}
+
+
+					#dd5{
+						transition-delay: 0.1s;
+					}
+						#example2:hover #dd5{
+							transform: translate(50px,-10px); /* translate ( diagonal , up / down) */
+						}
+					#dd6 {
+						transition-delay: 0.1s;
+					}
+						#example2:hover #dd6{
+							transform: translate(90px,-10px); /* translate ( diagonal , up / down) */
+						}
+
+				/* without this the dots will be shown before the effect can take place */
+				    .shadow{
+				    	opacity:0;
+				    }
+				     	#example2:hover .shadow{
+				     		opacity:1;
+				     	}
+			</style>
+	</head>
+	<body>
+
+<div id="example1">
+	<h2> Different Types Of Transitional Effects </h2>
+
+		<div id="ease" class="test_obj">ease</div>
+		<div id="ease-in" class="test_obj"> ease-in</div>
+		<div id="ease-out" class="test_obj"> ease-out</div>
+		<div id="ease-in-out" class="test_obj"> ease-in-out</div>
+		<div id="linear" class="test_obj"> linear</div>
+		<div id="negative" class="test_obj"> negative </div>
+
+
+	<h4 style="text-align:center;"><i>Hover Over Me</i></h4>
+</div>
+
+<br/>
+<hr/>
+<hr/>
+<br/>
+
+<div id="example2">
+	<div id="big_circle"></div>
+	<div id="dd1" class="shadow"></div>
+    <div id="dd2" class="shadow"></div>
+    <div id="dd3" class="shadow"></div>
+    <div id="dd4" class="shadow"></div>
+    <div id="dd5" class="shadow"></div>
+    <div id="dd6" class="shadow"></div>
+
+</div>
+
+
+	</body>
+</html>
