@@ -16,6 +16,8 @@
    * workorder
 
 4. Java
+   * CIT 260 Intro To Java
+     1. Folder CIT 260.../ contains assignments I have done for this class.
 
 5. Javascript
    * Lightbox
