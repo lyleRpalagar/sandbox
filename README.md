@@ -39,5 +39,4 @@
       4. Email Example
     * Tutoring PHP 336 Database
       1. dev.xospheriac
-      2. adavenport.com 
-      3. dev.yourstruly
+      2. dev.yourstruly
