@@ -35,5 +35,12 @@
    * Survey
    * Email
    * Tutoring PHP 336 Database
+
 7. DOCKER
    * PHP and Docker Environment ( docker-compose.yml )
+
+8. Python
+   * pig-latin-translator.py
+
+9. Xquery
+   * ml-start ( was a project to show how you can add,delete,modify , update files to marklogic and interact with the data using xquery )
