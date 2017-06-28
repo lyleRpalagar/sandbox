@@ -1,0 +1,149 @@
+@import "../../theme/main.css";
+
+.map{
+	min-height: 600px;
+	height: 75vh;
+	margin-bottom: -150px;
+
+	@media (--mq-100-only) {
+		margin-bottom: -80px;
+	}
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+.searchContainer {
+	position: relative;
+	top: var(--spacing-200);
+	left: var(--spacing-200);
+	width: 50vw;
+	max-width: 450px;
+}
+
+input[type="search"].search {
+	background-color: var(--white, #fff);
+	background-size: 20px 20px;
+	border: 1px solid #8a8a8b;
+	border-radius: 3px 0 0 0;
+	box-sizing: border-box;
+	height: 45px;
+	width: calc(100% - 45px);
+	outline: none;
+	padding: 8px 10px 8px 0;
+	position: absolute;
+	text-indent: 45px;
+	z-index: 1;
+
+
+}
+.search:focus{
+	box-shadow: 0px 0px 4px #14739D;
+}
+
+.searchIcon{
+	position: absolute;
+	margin: 12px;
+	z-index: 10;
+}
+
+.submit{
+	background-color:#14739D;
+	border: none;
+	border-radius: 0px 3px 0 0px;
+	box-sizing: border-box;
+	color:#fff;
+	font-size: 20px;
+	height: 45px;
+	line-height:10px;
+	position: absolute;
+	width: 45px;
+	left: calc(100% - 45px);
+	z-index:10;
+}
+
+/* results box  */
+.resultsContainer {
+	display: block;
+	font-size: var(--font-size-300);
+	padding: 0 var(--spacing-200);
+	border: 1px solid #666;
+	width: 100%;
+	border-radius: 0 0 3px 3px;
+	position: absolute;
+	top: 44px;
+	background: var(--white, #fff);
+	z-index: 9;
+	transition: opacity 200ms linear, visibility 0ms 200ms linear;
+	opacity: 0;
+	visibility: hidden;
+	max-height: 25vh;
+	overflow: hidden;
+
+	&:focus, & li {
+	   outline-style: none;
+	}
+}
+
+.bottom {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+.show {
+	opacity: 1;
+	visibility: visible;
+	transition: opacity 200ms linear, visibility 0ms 0ms linear;
+}
+
+.results {
+	margin: 0.5em 0 .75em;
+	padding: 0;
+	line-height: 1.7;
+	list-style: none;
+	overflow-y: scroll;
+	max-height: 23.7vh;
+	box-sizing: border-box;
+
+	&::-webkit-scrollbar {
+    	-webkit-appearance: none;
+	}
+
+	&::-webkit-scrollbar:vertical {
+    	width: 11px;
+	}
+
+	&::-webkit-scrollbar:horizontal {
+    	height: 11px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+	    border-radius: 8px;
+	    border: 2px solid white; /* should match background, can't be transparent */
+	    background-color: rgba(0, 0, 0, .5);
+	}
+
+	&::-webkit-scrollbar-track {
+	    background-color: #fff;
+	    border-radius: 8px;
+	}
+
+    & a {
+        display: block;
+        cursor: pointer;
+		box-sizing: border-box;
+		margin: var(--spacing-150);
+		line-height: 1.4;
+		padding: 0 var(--spacing-150);
+    }
+
+	& .noresults {
+		padding: 0 var(--spacing-150);
+	}
+
+	& hr {
+		width: 100%;
+		margin: 0;
+	}
+}

@@ -1,0 +1,98 @@
+@import "../../../theme/main.css";
+
+.detailsBox {
+    padding: var(--spacing-250) var(--spacing-250) var(--spacing-100);
+    width: 100%;
+    min-width: 320px;
+    background-color: #fff;
+    border:  1px solid  #888;
+	border-radius: 3px;
+    z-index: 1000;
+    position:  absolute;
+    top:  55px;
+
+    & a:link, & a:visited {
+        text-decoration: none;
+        color: var(--blue);
+    }
+}
+
+.closeSmall {
+    color:  #A19FA1;
+    position: absolute;
+    font-size: 12px;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+}
+
+.title {
+    font: var(--h3-sans);
+    margin-bottom: 15px;
+}
+
+.addressSection {
+    display: flex;
+
+    & div span {
+        display: block;
+    }
+
+    & div:first-child {
+        flex-grow: 4;
+    }
+}
+
+.address, .directionsLink {
+    display: inline-block;
+}
+
+.directionsLink {
+    color: #4D84C8;
+    align-self: center;
+    flex-grow: 3;
+    text-align: center;
+}
+
+.directionIcon {
+    display: block;
+    font-size: 25px;
+    text-align: center;
+}
+
+.address {
+    color: #AEADAE;
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.extras {
+    display: flex;
+
+    & .photos, & .moreInfo {
+        color: #4D84C8;
+        border-top: 1px solid #D8D8D8;
+        display: inline-block;
+        font-size: 14px;
+        margin-top: 7%;
+        padding: var(--spacing-250) 0 var(--spacing-100);
+        text-align: center;
+        width: 48%;
+    }
+
+    & .moreInfo {
+        border-right: 1px solid #D8D8D8;
+    }
+
+    & .photoIcon, & .infoIcon {
+        font-size: 20px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}
+
+.phone {
+    color: #4D84C8;
+    font-size: 18px;
+}
