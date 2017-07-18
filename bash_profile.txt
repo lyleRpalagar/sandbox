@@ -1,0 +1,101 @@
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages/
+export PATH=/usr/local/bin:$PATH
+# change file/folder color
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+#################################################
+# GIT COMMANDS
+#################################################
+parse_git_branch(){
+while read -r branch; do
+    [[ $branch = \** ]] && current_branch=${branch#* }
+done < <(git branch 2>/dev/null)
+
+[[ $current_branch ]] && printf ' [%s]' "$current_branch"
+}
+
+RED="\[\033[0;31m\]"
+YELLOW="\[\033[0;33m\]"
+GREEN="\[\033[0;32m\]"
+NO_COLOR="\[\033[0m\]"
+BLUE="\[\033[36m\]"
+PS1="$BLUE\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
+
+
+
+# Git branch bash completion
+# run in terminal first curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+# after run give permissions to script : chmod -X ~/.git-completion.bash
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  # Add git completion to aliases
+  __git_complete g __git_main
+  __git_complete gch _git_checkout
+  __git_complete gm _git_merge
+  __git_complete gps _git_push
+fi
+alias gch='git checkout'
+alias gps='git push origin'
+alias gb='git branch'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gm='git merge'
+alias g='git'
+
+
+#################################################
+# MISC
+#################################################
+alias mudgame="emacs -batch -l dunnet"
+alias busy="cat /dev/urandom | hexdump -C | grep \"ca fe\""
+alias cls='clear'
+alias afk='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias afknow="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
+alias editbash='vim ~/.bash_profile'
+alias bashedit=editbash
+alias reloadbash='source ~/.bash_profile'
+alias bashreload=reloadbash
+alias atombash="atom ~/.bash_profile"
+alias editvim='vim ~/.vimrc'
+alias editvimrc=editvim
+alias note='open -a notes'
+alias youtube='youtube-dl -f 18'
+alias startbing='cd ~/Documents/Github/LylePalagar/BingRewards
+                   ./main.py'
+
+alias transmit='open -a transmit'
+alias vpnext="sudo openconnect https://vpn2.ldschurch.org/externalsms"
+alias vpnint="sudo openconnect https://vpn2.ldschurch.org/internalsms"
+
+## # SSH into container
+alias dockerssh='function _dockerssh(){ docker exec -i -t "$1" bash; };_dockerssh'
+
+#################################################
+# TMUX
+#################################################
+alias ts='tmux new -s'
+alias tls='tmux ls'
+alias tkill='tmux kill-session -t'
+alias edittmux='vim ~/.tmux.conf'
+
+export NVM_DIR="/Users/lyle2487/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Setting PATH for Python 3.5
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 2.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
