@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<application env="LOCAL DOCKER STAGE TEST DEV UAT" appName="contentlocator" appDesc="Content Locator">
+  <roles>
+    <role name="app" description="Unauthenticated users" roles="*admin"/>
+    <role name="amps" description="Elevated privileges needed for functions">
+      <executePrivilege action="*http://marklogic.com/xdmp/privileges/xdmp-invoke"/>
+      <executePrivilege action="*http://marklogic.com/xdmp/privileges/xdmp-invoke-in"/>
+      <executePrivilege action="*http://marklogic.com/xdmp/privileges/xdmp-add-response-header"/>
+    </role>
+  </roles>
+  <users>
+    <user name="app" description="Unauthenticated user" password="app911" roles="app"/>
+  </users>
+  <dbs>
+    <db dbName="*Modules">
+      <dir name="/code/contentlocator-test/" clean="true" permissionsMode="set">
+        <permissions roles="app" access="rx" applyToChildren="false"/>
+        <load root="/" merge="false"/>
+        <server name="contentlocator-test" type="http" port="8502" db="*Delivery">
+          <authentication>application-level</authentication>
+          <defaultUser>app</defaultUser>
+          <computeContentLength>true</computeContentLength>
+          <debugAllow>false</debugAllow>
+          <profileAllow>true</profileAllow>
+        </server>
+      </dir>
+    </db>
+    <db dbName="*Delivery"/>
+  </dbs>
+</application>
