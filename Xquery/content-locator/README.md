@@ -39,6 +39,10 @@ Example of a configuration file
         </config>
      </cl>
 
+#### Demo:
 
+![Content-Locator Demo](https://github.com/lyleRpalagar/sandbox/blob/master/Xquery/content-locator/resources-img-example.gif)
+
+---------------------
 
 Author: Lyle Palagar
