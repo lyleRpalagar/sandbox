@@ -44,6 +44,7 @@
 
 9. Xquery
    * ml-start ( was a project to show how you can add,delete,modify , update files to marklogic and interact with the data using xquery )
+   * content-locator ( way to search large data in a marklogic database zip it up download and upload it to your local marklogic database )
 
 10. REACT/REDUX
    * javascript framework, inside is just a few examples of what components I have created and maintain
