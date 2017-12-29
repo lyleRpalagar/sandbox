@@ -48,3 +48,6 @@
 
 10. REACT/REDUX
    * javascript framework, inside is just a few examples of what components I have created and maintain
+
+11. PWA
+    * web application that has the look and feel of a app... basically the web but better
